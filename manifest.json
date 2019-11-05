@@ -1,0 +1,15 @@
+{ "name": "WA Send",
+  "version": "0.1",
+  "manifest_version": 2, 
+  "description": "Opens Tab!",
+  "omnibox": { "keyword" : "src" },
+  "permissions": ["tabs", "<all_urls>"],
+  "content_scripts": [
+  {
+    "matches": [
+      "https://web.whatsapp.com/*", "http://web.whatsapp.com/*", "https://wa.me/*", "http://wa.me/*"
+    ],
+    "js": [ "jquery.js", "content_script.js"]
+  }
+]
+}
